@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linked List Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    .list-display {
+      background: #f1f2f6;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #2d3436;
+      word-wrap: break-word;
+    }
+
+    form {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff6b81;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e55063;
+    }
+
+    .flash {
+      padding: 10px 15px;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .success {
+      background-color: #dff9fb;
+      color: #0984e3;
+    }
+
+    .danger {
+      background-color: #fab1a0;
+      color: #d63031;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🧠 Linked List Manager</h1>
+    <p>Manage your linked list with style!</p>
+  </header>
+
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endwith %}
+
+    <div class="section-title">📋 Current Linked List</div>
+    <div class="list-display">
+      {{ elements }}
+    </div>
+
+    <form action="/add" method="POST">
+      <input type="text" name="data" placeholder="Enter data (e.g., 42, hello)" required>
+      <button type="submit">➕ Add Node</button>
+    </form>
+
+    <form action="/delete" method="POST">
+      <input type="number" name="index" placeholder="Enter index to delete (1-based)" required>
+      <button type="submit">❌ Delete Nth Node</button>
+    </form>
+
+    <form action="/delete-middle" method="POST">
+      <button type="submit">🎯 Delete Middle Node</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Created By Jagruti Desale</p>
+  </footer>
+
+</body>
+</html>
