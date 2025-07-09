@@ -1,5 +1,5 @@
 
-# ⭐ Week 2: Singly Linked List Web App using Python & Flask
+#  Week 2: Singly Linked List Web App using Python & Flask
 
 This project is part of **Week 2** of the **Celebal Summer Internship** program.
 
@@ -7,7 +7,7 @@ The assignment was to implement a **Singly Linked List** using **Object-Oriented
 
 ---
 
-## 📌 Features
+##  Features
 
 - 🔹 `Node` class to represent each node
 - 🔹 `LinkedList` class with methods to:
@@ -26,7 +26,7 @@ The assignment was to implement a **Singly Linked List** using **Object-Oriented
 
 ---
 
-## 🧾 File Structure
+##  File Structure
 
 ```
 Celebal-Week2/
@@ -39,16 +39,16 @@ Celebal-Week2/
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
-### 1. 📥 Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/jagrutidesale04/Celebal-Week2.git
 cd Celebal-Week2
 ```
 
-### 2. 🐍 Create Virtual Environment (Optional but recommended)
+### 2. Create Virtual Environment (Optional but recommended)
 
 ```bash
 python -m venv venv
@@ -57,13 +57,13 @@ venv\Scripts\activate       # On Windows
 source venv/bin/activate    # On macOS/Linux
 ```
 
-### 3. 📦 Install Required Packages
+### 3.  Install Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. ▶️ Run the Flask App
+### 4.  Run the Flask App
 
 ```bash
 python app.py
@@ -74,7 +74,7 @@ python app.py
 ---
 
 
-## 📚 Sample Use Cases
+## Sample Use Cases
 
 - Add values like `10`, `20`, `30`, etc.
 - Click "Delete Nth Node" and provide index like `2`
@@ -83,7 +83,7 @@ python app.py
 
 ---
 
-## 📎 Requirements
+##  Requirements
 
 ```txt
 Flask==2.3.2
@@ -93,17 +93,17 @@ No external or complex dependencies are required.
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Jagruti Desale**  
 B.Tech – Data Science and Engineering (3rd Year)  
 Summer Intern @ Celebal Technologies  
 
-🔗 [GitHub](https://github.com/jagrutidesale04)  
-💼 [LinkedIn](https://www.linkedin.com/in/jagruti-desale-jd04)
+ [GitHub](https://github.com/jagrutidesale04)  
+ [LinkedIn](https://www.linkedin.com/in/jagruti-desale-jd04)
 
 ---
 
-## 📜 License
+##  License
 
 This project is for academic and educational use as part of Celebal's internship assignment. You are welcome to fork and learn from it!
